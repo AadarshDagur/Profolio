@@ -1,0 +1,91 @@
+.gradient-background {
+    background: linear-gradient(300deg, #15bdac, #43d9a2, #035776);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+  
+  
+  
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+
+h1 {
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+div.fname, div.lname, div.dob, div.number, div.details, div.bio {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+span {
+    color: #666;
+}
+
+/* Add some margin to the last child to give some space at the bottom */
+.container > div:last-child {
+    margin-bottom: 20px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    margin:3% 2%; 
+    width: 15%;
+    text-align: center;
+}
+
+#editButton{
+    background-color: green;
+    width: 40%;    
+}
+
+#logoutButton{
+    background-color: red;
+}
+
+#editButton,#logoutButton{
+    color: white;
+    font-size: 1.5rem;
+    border: 0;
+    border-radius: 10%;
+    padding: 3%;
+}

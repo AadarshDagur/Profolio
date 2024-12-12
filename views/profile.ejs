@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body class="gradient-background">
+    <h1><img src="icon.png" alt="logo" width="150" height="120"><br>Your Profile</h1>
+    <div class="container">
+        <div class="fname">
+            <label for="fname">First Name:</label>
+            <span id="fname"><%= profileData.fname %></span>
+        </div>
+        <div class="lname">
+            <label for="lname">Last Name:</label>
+            <span id="lname"><%= profileData.lname %></span>
+        </div>
+        <div class="dob">
+            <label for="dob">Date of Birth:</label>
+            <span id="dob"><%= profileData.dob %></span>
+        </div>
+        <div class="number">
+            <label for="number">Phone Number:</label>
+            <span id="number"><%= profileData.number %></span>
+        </div>
+        <div class="details">
+            <label for="education">Education Details:</label>
+            <span id="education"><%= profileData.details %></span>
+        </div>
+        <div class="bio">
+            <label for="bio">Bio:</label>
+            <span id="bio"><%= profileData.bio %></span>
+        </div>
+    </div>
+    <div class="buttons">
+    <form action="/create"> 
+    <button type="submit" id="editButton">Edit</button>
+    </form>
+    <form action="/logout">
+    <button type="submit" id="logoutButton">Logout</button>
+    </form> 
+    </div>
+
+    <script>
+        // Get the data passed from index.js
+        const profileData = JSON.parse('<%- JSON.stringify(profileData) %>');
+        
+    </script>
+<%- include('footer.ejs') %>
+</body>
+</html>
